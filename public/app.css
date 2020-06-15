@@ -1,0 +1,62 @@
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-right: 10px;
+}
+
+
+
+.jumbotron {
+    background-color: white;
+    opacity: 0.9;
+}
+
+/*#mate {
+    text-align: center;
+    align-content: center;
+    padding-left: 150px;
+}*/
+
+.something {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.card {
+    opacity: 0.9;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+
+.card-group {
+    margin-top: 70px;
+}
+
+.card-title {
+    text-align: center;
+    font-weight: 400;
+}
+
+h5{
+    text-align: center;  
+}
+
+.card-subtitle {
+    font-weight: 200;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 4px;
+}
+
+
+
+
+
+
+
+
+
+

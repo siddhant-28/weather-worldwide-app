@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Weather App</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type = "text/css" href="/app.css"> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Raleway:wght@100;300;500;600&display=swap" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/5861e1476e.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "h-100 row align-items-center" id="outer">
+                <div class = "col">
+                        <div class = row>
+                            <div class = "col-12">
+                                <h1>Weather App</h1>
+                            </div>
+                        </div>
+                        
+                        <form action = "/" method = "POST">
+                            <div class="form-row">
+                                <div class = "col-1">
+                                </div>
+                                <div class="col-10">
+                                <input type="text" class="form-control" placeholder="Name of place" name = "searchWeather" id = "search_term">
+                                </div>
+                                <div class = "col-1">
+                                    <button type="submit" class="btn btn-outline-success">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="card">
+                                <div class="card-body">
+                                  <h5 class="card-title">Weather Report</h5>
+                                  <h5 class = "card-subtitle"><i><%= weatherObject.city %></i></h5>
+                                  <div class = "row" id = "photoRow">
+                                      <div class = "col-4">
+                                          <h5>Temperature</h5>
+                                        <i class="fas fa-temperature-low fa-3x" id="mate"></i>
+                                        <p class = "something"><%= weatherObject.temperature %> °C</p>
+                                      </div>
+                                      <div class = "col-4">
+                                          <h5>Outside Conditions</h5>
+                                          <i class="fas fa-cloud-sun fa-3x" id="mate"></i>
+                                          <p class = "something"><%= weatherObject.description %></p>
+                                      </div>
+                                      <div class = "col-4">
+                                            <h5>Sunrise | Sunset Timings</h5>
+                                            <i class="far fa-sun fa-3x" id="mate"></i>
+                                            <p class = "something"><%= weatherObject.sunrise %> | <%= weatherObject.sunset %></p>
+                                        </div>
+                                  </div>
+                                </div>
+
+                              </div>
+                        
+                    </div>
+                </div>
+                    
+            </div>
+        <script>
+            function activatePlacesSearch() {
+                var input = document.getElementById('search_term');
+                var autocomplete = new google.maps.places.Autocomplete(input)
+            }
+        </script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3mmJgNWDaAzWElMPBQ7-8XSHXulzyn1E&libraries=places&callback=activatePlacesSearch"></script>
+        <script type = "text/javascript" src = "/main.js"></script>
+    </body>
+</html>
